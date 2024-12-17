@@ -1,0 +1,15 @@
+
+<div *ngIf="residence; else noResidence " class="residence-details">
+  <img [src]="residence.image" [alt]="residence.name" />
+  <div class="description">
+    <h1>{{ residence.name }}</h1>
+    <p>Address: {{ residence.address }}</p>
+    <p>Status: {{ residence.status }}</p>
+  </div>
+
+  <button (click)="goToNextResidence()" class="next">></button>
+</div>
+
+<ng-template #noResidence>
+  <p>Residence not found.</p>
+</ng-template>

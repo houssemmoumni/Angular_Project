@@ -1,0 +1,34 @@
+<div class="search">
+  <input [(ngModel)]="searchAddress" placeholder="Rechercher par adresse" />
+</div>
+
+<div class="residence-grid">
+  <div *ngFor="let residence of filteredResidences" class="residence-card">
+    <h3>{{ residence.name }}</h3>
+    <img [src]="residence.image" alt="{{ residence.name }}" class="residence-image" />
+    <button class="btn-location" (click)="showLocation(residence)">
+      <i class="fas fa-map-marker-alt"></i> Show Location
+    </button>
+    <button class="btn-heart" (click)="toggleFavoriteStatus(residence)" [ngClass]="{'liked': isFavorite(residence)}">
+      <i class="fas" [ngClass]="isFavorite(residence) ? 'fa-heart' : 'fa-heart-broken'"></i>
+    </button>
+    <button [routerLink]="['/residences', residence.id]" class="btn-details">
+      <i class="fas fa-info-circle"></i> Voir les Détails
+    </button>
+    <p>Status: {{ residence.status }}</p>
+    <div class="status-badge">
+      <span *ngIf="residence.status === 'Disponible'" class="badge-success">Disponible</span>
+      <span *ngIf="residence.status === 'Vendu'" class="badge-danger">Vendu</span>
+      <span *ngIf="residence.status === 'En Construction'" class="badge-warning">En Construction</span>
+    </div>
+  </div>
+</div>
+
+<h3><i>Your Favorites:</i></h3>
+<div class="residence-grid">
+  <div *ngFor="let residence of favoriteResidences" class="residence-card">
+    <h3>{{ residence.name }}</h3>
+    <img [src]="residence.image" alt="{{ residence.name }}" class="residence-image" />
+    <p>Status: {{ residence.status }}</p>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+
+.btn-heart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.fas {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.liked i {
+  color: red;
+}
+
+.btn-heart i {
+  color: red;
+}
+
+
+.btn-heart:hover {
+  transform: scale(1.2);
+}
+
+.residence-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.residence-card {
+  flex-basis: 25%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.residence-card img {
+  width: 300px;
+  max-height: 200px;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.residence-card img:hover {
+  transform: scale(1.01);
+}
+
+.badge-success {
+  background-color: #4caf50;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+.badge-danger {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ff9800;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+button {
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 16px;
+}
